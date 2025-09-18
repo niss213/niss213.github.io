@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 Bibliothèque numérique</title>
+
+  <!-- Police Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Ton fichier CSS -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#20c997">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>📚 Bibliothèque numérique</h1>
+    <a href="../accueil.html" class="btn-accueil">🏠 Accueil</a>
+  </header>
+
+  <!-- Catalogue -->
+  <main>
+    <div class="catalogue">
+      <div class="livre-card">
+        <img src="https://static-www.nathan.fr/produits/hyperbole-terminale-specialite-9782091728919.webp" alt="Mathématiques">
+        <div class="info">
+          <p class="titre">Mathématiques</p>
+          <button class="btn-lire" onclick="openBook('../livre/math.pdf')">Lire</button>
+        </div>
+      </div>
+
+      <div class="livre-card">
+        <img src="https://www.magnard.fr/sites/default/files/styles/mea_grand/public/couvertures/9782210114173-g.jpg?itok=2wloKLTC" alt="Philosophie">
+        <div class="info">
+          <p class="titre">Philosophie</p>
+          <button class="btn-lire" onclick="openBook('../livre/philo.pdf')">Lire</button>
+        </div>
+      </div>
+
+      <div class="livre-card">
+        <img src="https://www.magnard.fr/sites/default/files/styles/mea_grand/public/couvertures/9782210113688-g.jpg?itok=ZavnHA8i" alt="Histoire">
+        <div class="info">
+          <p class="titre">Histoire</p>
+          <button class="btn-lire" onclick="openBook('../livre/histoire.pdf')">Lire</button>
+        </div>
+      </div>
+
+      <div class="livre-card">
+        <img src="https://lanzate.nathan.fr/images/books/6315c06d68814.jpeg" alt="Espagnol">
+        <div class="info">
+          <p class="titre">Espagnol</p>
+          <button class="btn-lire" onclick="openBook('../livre/espagnol.pdf')">Lire</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Ton script principal -->
+  <script src="script.js"></script>
+
+  <!-- Enregistrement du Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker enregistré ✅'))
+        .catch(err => console.log('Erreur Service Worker ❌', err));
+    }
+  </script>
+</body>
+</html>

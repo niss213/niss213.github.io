@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 Bibliothèque numérique - Mobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>📚 Bibliothèque numérique</h1>
+    <a href="../accueil.html" class="btn-accueil">🏠 Accueil</a>
+  </header>
+
+  <main>
+    <div class="catalogue">
+      <!-- Exemple de manuel -->
+      <div class="livre-card">
+        <img src="https://static-www.nathan.fr/produits/hyperbole-terminale-specialite-9782091728919.webp" alt="Mathématiques">
+        <div class="info">
+          <p class="titre">Mathématiques</p>
+          <button class="btn-lire" onclick="openBookPage('../livre/math.html')">Lire</button>
+        </div>
+      </div>
+
+      <div class="livre-card">
+        <img src="https://www.magnard.fr/sites/default/files/styles/mea_grand/public/couvertures/9782210114173-g.jpg?itok=2wloKLTC" alt="Philosophie">
+        <div class="info">
+          <p class="titre">Philosophie</p>
+          <button class="btn-lire" onclick="openBookPage('../livre/philo.html')">Lire</button>
+        </div>
+      </div>
+
+      <div class="livre-card">
+        <img src="https://www.magnard.fr/sites/default/files/styles/mea_grand/public/couvertures/9782210113688-g.jpg?itok=ZavnHA8i" alt="Histoire">
+        <div class="info">
+          <p class="titre">Histoire</p>
+          <button class="btn-lire" onclick="openBookPage('../livre/histoire.html')">Lire</button>
+        </div>
+      </div>
+
+      <div class="livre-card">
+        <img src="https://lanzate.nathan.fr/images/books/6315c06d68814.jpeg" alt="Espagnol">
+        <div class="info">
+          <p class="titre">Espagnol</p>
+          <button class="btn-lire" onclick="openBookPage('../livre/espagnol.html')">Lire</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Popup d'installation -->
+<div id="installPrompt" class="install-popup" style="display:none;">
+  <p>📲 Ajouter ce site à votre écran d'accueil pour un accès rapide !</p>
+  <button id="installBtn">Ajouter</button>
+  <button id="dismissBtn">Fermer</button>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* === Reset et font === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f9fbfa;
+  color: #333;
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #20c997, #6fd3c8);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn-accueil {
+  background: #ffffff;
+  color: #20c997;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-accueil:hover {
+  background: #e0f5f2;
+  transform: scale(1.05);
+}
+
+/* === Catalogue === */
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.livre-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.livre-card img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titre {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1b7a6b;
+}
+
+/* Bouton Lire */
+.btn-lire {
+  background: #20c997;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-lire:hover {
+  background: #17a589;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .catalogue {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .livre-card {
+    width: 220px;
+  }
+}
+
+.install-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #20c997;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 1000;
+}
+
+.install-popup p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.install-popup button {
+  background: white;
+  color: #20c997;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 0 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.install-popup button:hover {
+  background: #e0f5f2;
+}
